@@ -1,44 +1,26 @@
 ---
-layout: base
----
-{% if page.cover_image %}
-<div class="article-cover">
-    <div>
-        <img src="/images/{{ page.cover_image }}" class="image">
+layout: default
+---        
+
+<div class='row'>
+    <div class='col-small header'>
+        <a href='/' class='fa fa-angle-left'> Home</a>
+    </div>
+    <div class='col-large'>
+        <h2>{{ page.title }}</h2>
     </div>
 </div>
-{% endif %}
-<article>
-
-    <div class="container">
-        <header>
-            <div class="meta">
-                By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a> &mdash;
-                <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
-            </div>
-            <h1 class="title">{{ page.title }}</h1>
-            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
-        </header>
-
-        <section>
-            {{ content }}
-            {% include _social.html %}
-        </section>
-
-        <footer>
-            <address>
-               {% if page.author.image %}<img src="/images/{{ page.author.image }}">{% endif %}
-                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}" title="{{ page.author_name }}" target="_blank">{{ page.author.name }}</a></strong><br>
-                <span class="muted">{{ page.author.bio }}</span>
-                </p>
-            </address>
-
-        </footer>
-
-        {% if site.inc.disqus.shortname %}
-        <section>
-            {% include _disqus.html %}
-        </section>
-        {% endif %}
+<div class='row'>
+    <div class='col-small'>
+        <div class='detail'>
+            {{ page.date | date_to_string }}
+        </div>
+        <div class='detail'>
+            by {{ page.author }}
+        </div>
     </div>
-</article>
+    <div class='col-large'>
+        {{ content }}
+    </div>
+    <div class='clear'></div>
+</div>

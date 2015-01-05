@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% if page.title %} {{ page.title }} | {% endif %} Cheddar Blog</title>
+    <!-- FONT AWESOME -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:bold' rel='stylesheet' type='text/css'>
+
+    <script src="//use.typekit.net/qgh5our.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <!-- INLINE -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "proxima-nova", sans-serif;
+        }
+        pre, code, pre *, code * {
+            background-color: #a0a0a0;
+            font-family: "source-code-pro", monospace;
+            border-radius: 4px;
+            color: #fff;
+        }
+        pre {
+            padding: 14px 20px;
+            border: 4px solid #b0b0b0;
+        }
+        code {
+            padding: 0 6px;
+        }
+        pre code {
+            padding: 0;
+            border-radius: 0;
+        }
+        a, a:hover, a:active, a:visited {
+            color: rgb(255, 140, 0);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: 0.35s;
+            transition: 0.35s;
+        }
+        a:hover {
+            border-bottom: 2px solid #DAB6E2;
+            color: #DAB6E2;
+        }
+        .logo-image a {
+          border-bottom-width: 0px !important;
+        }
+        .logo {
+          font-family: Montserrat, sans-serif;
+          font-weight: bold;
+          color: rgb(255, 140, 0);
+        }
+        .container {
+            padding: 80px;
+            width: 1020px;
+            margin: auto auto;
+        }
+        .row {
+            margin-bottom: 40px;
+            font-size: 21px;
+            line-height: 33px;
+        }
+        .col-small.header {
+            margin-top: 10px;
+        }
+        .col-small.header a {
+            display: block;
+            float: right;
+            border-bottom: 2px solid rgb(255, 200, 130);
+            -webkit-transition: 0.35s;
+            transition: 0.35s;
+            line-height: 23px;
+            margin-top: 6px;
+        }
+        .col-small.header a:hover {
+            color: rgb(255, 140, 0);
+            border-color: rgb(255, 140, 0);
+        }
+        .col-small {
+            font-size: 18px;
+            min-height: 1px;
+            float: left;
+            width: 150px;
+            margin-right: 50px;
+            text-align: right;
+        }
+        .col-small .detail:first-child {
+            margin-top: 26px;
+        }
+        .col-small .detail, .col-small a {
+            color: rgb(255, 200, 130);
+        }
+
+        .col-large {
+            min-height: 1px;
+            color: #3a3a3a;
+            float: left;
+            width: 820px;
+        }
+        .col-large.intro .headline {
+            float: left;
+        }
+        .col-large.intro .headline h1 {
+            margin-top: 40px;
+        }
+        .col-large.intro .headline .detail {
+            margin-top: 6px;
+            color: #999;
+        }
+        .col-large.intro .links {
+            float: right;
+        }
+        .col-large.intro .links a {
+            float: right;
+            margin-left: 16px;
+            font-size: 28px;
+            color: #3a3a3a;
+            -webkit-transition: 0.35s;
+            transition: 0.35s;
+            border: none;
+            margin-top: 58px;
+        }
+        .col-large.intro .links a:hover {
+            color: rgb(255, 140, 0);
+        }
+        .col-large p {
+            margin: 26px 0;
+        }
+        .col-large h2 {
+            font-family: Montserrat, sans-serif;
+            color: #2a2a2a !important;
+            margin: 10px 36px 30px 0px;
+            border-bottom: 4px solid rgb(255, 140, 0);
+            padding: 0 10px 6px 2px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        .clear {
+            clear: both;
+        }
+
+        ul {
+            margin: 20px 0 20px 60px;
+            list-style-type: none;
+        }
+        ul li {
+            position: relative;
+        }
+        ul li:before {
+            position: absolute;
+            top: 6px;
+            left: -26px;
+            color: rgb(255, 140, 0);
+            content: '*';
+            font-weight: bold;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-small'>
+                <span class='logo-image'>
+                  <a href='https://cheddarcard.com/'><img src='/imgs/logo150x150.png'></a>
+                </span>
+            </div>
+            <div class='col-large intro'>
+                <div class='headline'>
+                    <h1 class='logo'>Cheddar Blog</h1>
+                    <div class='detail'>Elegant mobile banking that rewards smart choices. Get wealthy. Win big. Bank better.</div>
+                </div>
+                <div class='links'>
+                    <a href='https://github.com/quarryio' class='fa fa-github'></a>
+                    <a href='https://twitter.com/quarryio' class='fa fa-twitter'></a>
+                    <a href='https://facebook.com/quarryio' class='fa fa-facebook-square'></a>
+                    <a href='mailto:hello@quarry.io' class='fa fa-envelope'></a>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+        {{ content }}
+    </div>
+</body>
+</html>
