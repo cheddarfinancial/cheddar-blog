@@ -6,7 +6,7 @@ author: Brian Brunner
 categories: cheddar first
 ---
 
-<iframe class='story-video-desktop desktop-only' width="700" height="394" src="https://www.youtube.com/embed/RdWFd8k1fx0" frameborder="0" allowfullscreen></iframe>
+<iframe class='story-video-desktop desktop-only' width="800" height="463" src="https://www.youtube.com/embed/RdWFd8k1fx0" frameborder="0" allowfullscreen></iframe>
 
 We've been testing an internal version of Cheddar for the past few months now. We put together a short
 video about our story that shows a quick preview of Cheddar in action. 
